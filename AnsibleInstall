@@ -1,0 +1,19 @@
+############################################################
+# Dockerfile to build Ansible images
+# Based on Ubuntu
+############################################################
+
+FROM ubuntu
+MAINTAINER Lal Krishna
+
+################## BEGIN INSTALLATION ######################
+
+RUN apt-get install software-properties-common
+RUN apt-add-repository ppa:ansible/ansible
+
+RUN apt-get update
+
+# Install Ansible package
+RUN apt-get install -y ansible
+
+##################### INSTALLATION END #####################
