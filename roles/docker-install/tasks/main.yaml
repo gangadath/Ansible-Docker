@@ -1,5 +1,5 @@
 ---
-- name: main | Install Docker Eackages
+- name: main | Install Docker Packages
   apt:
     pkg: "{{ item }}"
     state: 'latest'
